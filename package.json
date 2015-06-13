@@ -1,0 +1,22 @@
+{
+  "name": "go-scraper",
+  "version": "1.0.0",
+  "description": "scrape game statistics for csgo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cw0/go-scraper.git"
+  },
+  "keywords": [
+    "csgo"
+  ],
+  "author": "Christopher Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cw0/go-scraper/issues"
+  },
+  "homepage": "https://github.com/cw0/go-scraper#readme"
+}
