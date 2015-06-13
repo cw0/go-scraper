@@ -5,6 +5,16 @@ var express = require('express'),
     colors = require('colors'),
     app = express();
 
+function getMatchData(html) {
+  var $ = cheerio.load(html),
+      match = {};
+
+  match.leftTeam = $('.teamtext b').first().text();
+  match.rightTeam = $('.teamtext b').last().text();
+
+  return match;
+}
+
 //set route for /scrape
 app.get('/scrape', function (req, res) {
 
@@ -13,18 +23,13 @@ app.get('/scrape', function (req, res) {
 	request(url, function(error, response, html) {
 		if(!error) {
       var $ = cheerio.load(html),
-          title,
-          release,
-          rating,
-          json = {
-            title : "",
-            release : "",
-            rating : ""
-          };
+          matches = [];
 
-      $('.match').filter(function (){
-        console.log($(this).text());
+      $('.matchmain').each(function (index, element){
+        matches[index] = getMatchData($(this).html());
       });
+
+      console.log(matches);
     }
 	});
 
