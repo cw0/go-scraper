@@ -18,10 +18,10 @@ function getMatchData(html) {
 //set route for /scrape
 app.get('/scrape', function (req, res) {
 
-	url = 'http://csgolounge.com/';
+url = 'http://csgolounge.com/';
 
-	request(url, function(error, response, html) {
-		if(!error) {
+  request(url, function(error, response, html) {
+    if(!error) {
       var $ = cheerio.load(html),
           matches = [];
 
@@ -31,8 +31,7 @@ app.get('/scrape', function (req, res) {
 
       console.log(matches);
     }
-	});
-
+  });
 });
 
 app.listen('8081')
