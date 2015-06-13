@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/cw0/go-scraper/issues"
   },
-  "homepage": "https://github.com/cw0/go-scraper#readme"
+  "homepage": "https://github.com/cw0/go-scraper#readme",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "colors": "^1.1.0",
+    "express": "^4.12.4",
+    "request": "^2.57.0"
+  }
 }
