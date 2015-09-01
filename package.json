@@ -4,7 +4,8 @@
   "description": "scrape game statistics for csgo",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
